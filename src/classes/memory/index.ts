@@ -1,3 +1,4 @@
+import { hexlify } from "@ethersproject/bytes";
 import { MAX_UINT256 } from "../../constants";
 import { InvalidMemoryOffset, InvalidMemoryValue } from "./errors";
 
@@ -22,6 +23,13 @@ class Memory {
         if(offset >= this.memory.length) return BigInt(0);
 
         return this.memory[Number(offset)];
+    }
+
+    public print(): void{
+        console.log(
+            `Memory:\t`,
+            this.memory.map((value) => hexlify(value))
+        )
     }
 }
 
