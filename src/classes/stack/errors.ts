@@ -6,5 +6,6 @@ class InvalidStackValue extends Error {
 
 class StackOverflow extends Error {}
 class StackUnderflow extends Error {}
+class IndexOutOfBounds extends Error{}
  
-export { InvalidStackValue, StackOverflow, StackUnderflow}
+export { InvalidStackValue, StackOverflow, StackUnderflow, IndexOutOfBounds}
